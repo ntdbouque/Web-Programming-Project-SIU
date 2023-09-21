@@ -1,4 +1,4 @@
-# Quản Lý Nhà Sách
+# Ứng dụng Web quản lý nhà sách
 
 ## Mô Tả
 Ứng dụng Quản Lý Nhà Sách là một ứng dụng web giúp bạn quản lý và sắp xếp danh sách các cuốn sách trong nhà sách của bạn. Với ứng dụng này, bạn có thể thêm, sửa đổi và xóa sách, gán thể loại và tác giả, và theo dõi tình trạng mượn trả của từng cuốn sách.
