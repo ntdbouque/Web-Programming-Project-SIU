@@ -12,3 +12,21 @@ Vui lòng tuân theo các bước sau để cài đặt ứng dụng Quản Lý 
 
    ```shell
    git clone https://github.com/yourusername/bookstore-management.git
+
+## Cấu hình cơ sở dữ liệu:
+MONGODB_URI=your_mongodb_uri
+
+## Cài đặt phụ thuộc:
+cd bookstore-management
+npm install
+
+## Chạy ứng dụng:
+npm start
+
+## Truy cập ứng dụng:
+Mở trình duyệt và truy cập ứng dụng tại địa chỉ: http://localhost:3000
+
+## Giấy Phép
+Dự án này được phân phối dưới giấy phép [Giấy Phép MIT](LICENSE).
+
+[![Giấy Phép MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
