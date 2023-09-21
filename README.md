@@ -17,8 +17,8 @@ Vui lòng tuân theo các bước sau để cài đặt ứng dụng Quản Lý 
 MONGODB_URI=your_mongodb_uri
 
 ## Cài đặt phụ thuộc:
-cd bookstore-management
-npm install
+- cd bookstore-management
+- npm install
 
 ## Chạy ứng dụng:
 npm start
