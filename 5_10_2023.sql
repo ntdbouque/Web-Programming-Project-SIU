@@ -1,7 +1,6 @@
 CREATE DATABASE WEB_VER3
-
 USE WEB_VER3
-Drop table KhachHang;
+
 CREATE TABLE Sach(
     MaSach VARCHAR(10) PRIMARY KEY,
     DonGiaNhap DECIMAL(10, 2),
@@ -24,26 +23,26 @@ CREATE TABLE KhachHang (
     DiaChi NVARCHAR(200),
 	NoDauThang int,
 	PhatSinh int,
-	NoCuoiThang int,
-
+	NoCuoiThang int
 );
 
 CREATE TABLE NhanVien (
-    MaNhanVien VARCHAR PRIMARY KEY,
+	MaNhanVien VARCHAR(10) Primary key,
+    UserID NVARCHAR(100),
     TenNhanVien NVARCHAR(100),
     Email VARCHAR(100),
     NgaySinh DATE,
     MaSach VARCHAR(10),
     ChucVu NVARCHAR(100),
     FOREIGN KEY (MaSach) REFERENCES Sach(MaSach),
-	FOREIGN KEY (AccName) REFERENCES Account(AccName)
+	FOREIGN KEY (UserID) REFERENCES Account(UserID)
 );
 
 CREATE TABLE TheLoai (
-    MaTheLoai VARCHAR PRIMARY KEY,
+    MaTheLoai VARCHAR(20) PRIMARY KEY,
     TenTheLoai NVARCHAR(100)
 );
-
+drop table TheLoai
 CREATE TABLE HoaDonBan (
     MaHoaDonBan VARCHAR(10) PRIMARY KEY,
     MaKhachHang VARCHAR(10),
@@ -83,18 +82,15 @@ CREATE TABLE Kho (
     FOREIGN KEY (MaNhanVien) REFERENCES NhanVien(MaNhanVien),
     FOREIGN KEY (MaSach) REFERENCES Sach(MaSach)
 );
-ALTER TABLE Account
-ADD UNIQUE (AccName);
+
 Create table Account(
-	AccName NVARCHAR(100) PRIMARY KEY,
+	UserID NVARCHAR(100) PRIMARY KEY,
 	AccrRole VARCHAR(10),
 	AccPass VARCHAR(32),
 );
-drop table Account;
 
 CREATE TABLE Admin(
-	AdId VARCHAR(10),
-	AdName VARCHAR(100),
-	FOREIGN KEY (AccName) REFERENCES Account(AccName),
+	UserID NVARCHAR(100),
+	AdID VARCHAR(100) primary key,
+	FOREIGN KEY (UserID) REFERENCES Account(UserID)
 );
-
